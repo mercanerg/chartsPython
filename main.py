@@ -1,0 +1,22 @@
+import matplotlib.pyplot as plt
+import numpy as np
+fig = plt.figure()
+ax = plt.axes()
+ax.set(facecolor='#EEACDF23')
+# ax = fig.add_subplot(1, 1, 1)
+ax.spines['left'].set_position('center')
+ax.spines['bottom'].set_position('center')
+ax.spines['right'].set_color('none')
+ax.spines['top'].set_color('none')
+ax.xaxis.set_ticks_position('bottom')
+ax.yaxis.set_ticks_position('left')
+x = np.linspace(-20,20,100)
+# y = np.sin(x)
+y = 2*x**3 - 4*x**2 + 6*x - 12
+plt.plot(x, y, '-r', label='f(x)')
+plt.title('Graph of y = 2X^3 - 4X^2 + 6X - 12')
+plt.xlabel('x', color='#1C2833')
+plt.ylabel('y', color='#1C2833')
+plt.legend(loc='upper left')
+plt.grid()
+plt.show()
